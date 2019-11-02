@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.App-Header {
+    height: 150px;
+    width: 100%;
+    background-color: black;
+}
+
+.Header-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.Header-icon {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.Header-title {
+    font-size: 60px;
+    color: white;
+    padding-top: 25px;
+}
