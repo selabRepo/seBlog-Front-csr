@@ -23,5 +23,5 @@
     "allowSyntheticDefaultImports": true // export default 를 export 한 값들을 가지는 객체로 설정
   },
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"],
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "public/*"]
 }
