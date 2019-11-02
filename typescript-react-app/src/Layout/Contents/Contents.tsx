@@ -7,9 +7,9 @@ const Contents = () => {
         return (
                 <div className="App-contetns">
                         <Route exact path="/" component={Home}/>
-                        <Route exact path="/About" component={About}/>
-                        <Route exact path="/Blog" component={Blog} />
-                        <Route exact path="/Setting" component={Setting} />
+                        <Route path="/About" component={About}/>
+                        <Route path="/Blog" component={Blog} />
+                        <Route path="/Setting" component={Setting} />
                 </div>
         )
 
