@@ -1,6 +1,5 @@
 import * as React from "react";
 import Layout from "./Layout";
-import { hot as Hot } from "react-hot-loader";
 
 class App extends React.Component {
   public render() {
@@ -8,4 +7,4 @@ class App extends React.Component {
   }
 }
 
-export default Hot(module)(App);
+export default App;
