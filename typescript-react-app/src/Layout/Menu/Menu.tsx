@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { HashRouter as Router, Link} from 'react-router-dom'
+import { HashRouter as Router, NavLink } from 'react-router-dom'
 import './Menu.css';
 
 
@@ -8,10 +8,10 @@ const Menu = () => {
     <div className="App-Menu">
       <div className="Menu-container">
         <Router>
-          <Link to='/' className="menu-item">Home</Link>
-          <Link to='/About' className="menu-item">About</Link>
-          <Link to='/Blog' className="menu-item">Blog</Link>
-          <Link to='/Setting' className="menu-item">Setting</Link>
+          <NavLink to='/Home' className="menu-item" activeClassName='active'>Home</NavLink >
+          <NavLink to='/About' className="menu-item" activeClassName='active'>About</NavLink >
+          <NavLink to='/Blog' className="menu-item" activeClassName='active'>Blog</NavLink >
+          <NavLink to='/Setting' className="menu-item" activeClassName='active'>Setting</NavLink >
         </Router>
       </div>
     </div>
