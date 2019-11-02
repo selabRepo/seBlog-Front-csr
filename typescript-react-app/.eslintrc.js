@@ -5,73 +5,76 @@ module.exports = {
     jest: true
   },
   extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
   ],
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly"
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
-    project: './tsconfig.json',
+    project: "./tsconfig.json",
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module"
   },
-  plugins: [
-    'react',
-    'prettier',
-    '@typescript-eslint',
-    'react-hooks'
-  ],
+  plugins: ["react", "prettier", "@typescript-eslint"],
   rules: {
-    "prefixWithI": "never",
-    "prettier/prettier": [0,
+    "prettier/prettier": [
+      0,
       {
-        "semi": true,
-        "singleQuote": true,
-        "trailingComma": "es5",
-        "printWidth": 100,
-        "tabWidth": 2,
-        "arrowParens": "avoid",
-        "jsxSingleQuote": false,
-        "jsxBracketSameLine": true,
+        semi: true,
+        singleQuote: true,
+        trailingComma: "es5",
+        printWidth: 100,
+        tabWidth: 2,
+        arrowParens: "avoid",
+        jsxSingleQuote: false,
+        jsxBracketSameLine: true
       }
     ],
-    "semi": 0,
-    "eqeqeq": [1, "always"],
-    "quotes": [1, "single"],
+    semi: 0,
+    eqeqeq: [1, "always"],
+    quotes: [1, "single"],
     "jsx-quotes": [2, "prefer-double"],
     "no-undef": 0,
     "no-console": 1,
     "no-unused-vars": 0,
-    "no-mixed-operators": [1,
+    "no-mixed-operators": [
+      1,
       {
-        "allowSamePrecedence": true
+        allowSamePrecedence: true
+      }
+    ],
+    "ordered-imports": [
+      0,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
       }
     ],
     "eol-last": [2, "always"],
     "no-confusing-arrow": 0,
     "arrow-parens": [2, "as-needed"],
-    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "arrow-spacing": ["error", { before: true, after: true }],
     "arrow-body-style": [2, "as-needed"],
     "no-extra-parens": [
       "warn",
       "all",
       {
-        "conditionalAssign": false,
-        "nestedBinaryExpressions": false,
-        "ignoreJSX": "none",
-        "enforceForArrowConditionals": false
+        conditionalAssign: false,
+        nestedBinaryExpressions: false,
+        ignoreJSX: "none",
+        enforceForArrowConditionals: false
       }
     ],
     "no-param-reassign": 0,
@@ -81,7 +84,7 @@ module.exports = {
     "prefer-promise-reject-errors": 0,
     "no-unused-expressions": 0,
     // "dot-notation": 0,
-
+    "@typescript-eslint/restrict-plus-operands": "error",
     "import/prefer-default-export": 0,
     "import/no-useless-path-segments": 1,
     "import/no-unresolved": 0,
@@ -101,26 +104,27 @@ module.exports = {
     "jsx-a11y/iframe-has-title": 0,
     "jsx-a11y/control-has-associated-label": 0,
 
-    "react/jsx-wrap-multilines": [2,
+    "react/jsx-wrap-multilines": [
+      2,
       {
-        "declaration": "parens-new-line",
-        "assignment": "parens-new-line",
-        "return": "parens-new-line",
-        "arrow": "ignore",
-        "condition": "ignore",
-        "logical": "ignore",
-        "prop": "ignore"
+        declaration: "parens-new-line",
+        assignment: "parens-new-line",
+        return: "parens-new-line",
+        arrow: "ignore",
+        condition: "ignore",
+        logical: "ignore",
+        prop: "ignore"
       }
     ],
     "react/jsx-filename-extension": 0,
     "react/jsx-indent": 0,
     "react/jsx-boolean-value": 0,
     "react/jsx-closing-tag-location": 0,
-    "react/jsx-closing-bracket-location": [2, { selfClosing: 'props-aligned', nonEmpty: 'after-props' }],
+    "react/jsx-closing-bracket-location": [2, { selfClosing: "props-aligned", nonEmpty: "after-props" }],
     "react/button-has-type": 0,
     "react/prop-types": 0,
     "react/button-has-type": 0,
-    "react/jsx-tag-spacing": [2, { "beforeSelfClosing": "always" }],
+    "react/jsx-tag-spacing": [2, { beforeSelfClosing: "always" }],
     "react/jsx-one-expression-per-line": 0,
     "react/jsx-curly-spacing": 0,
     "react/no-access-state-in-setstate": 0,
@@ -143,9 +147,9 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
-    "@typescript-eslint/no-angle-bracket-type-assertion": 0,
+    "@typescript-eslint/no-angle-bracket-type-assertion": 0
     // TODO: enable the lines below when refactoring
     // "react-hooks/rules-of-hooks": 1,
     // "react-hooks/exhaustive-deps": 1
-  },
+  }
 };

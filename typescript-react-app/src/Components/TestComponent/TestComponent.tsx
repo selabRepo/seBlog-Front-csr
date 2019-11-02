@@ -1,6 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
-const testComponent: React.SFC = () => {
-  return <div>data</div>;
-};
+const testComponent: React.SFC = () => <div>data</div>;
 export default testComponent;
