@@ -17,7 +17,8 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true, // export default 를 export 한 값들을 가지는 객체로 설정
   },
   "exclude": [
     "node_modules",
