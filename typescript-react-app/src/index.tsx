@@ -1,10 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-const destination = document.querySelector('.root');
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import App from "./App";
+import "./index.css";
+const destination = document.querySelector(".root");
 
-ReactDOM.render(
-  <App />,
-  destination
-);
+ReactDOM.render(<App />, destination);
