@@ -1,16 +1,15 @@
 import React from 'react'
 import './Contents.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import About from '../../pages/About'
+import { Route } from 'react-router-dom'
+import { Home, About, Blog, Setting } from '../../pages'
 
 const Contents = () => {
         return (
                 <div className="App-contetns">
-                        <Router>
-                                <Switch>
-                                        <Route exact path="/About" component={About} />
-                                </Switch>
-                        </Router>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/About" component={About}/>
+                        <Route path="/Blog" component={Blog} />
+                        <Route path="/Setting" component={Setting} />
                 </div>
         )
 
