@@ -1,4 +1,16 @@
-import * as React from 'react';
+import * as React from "react";
+interface StateProps {}
+interface DispatchProps {}
+interface OwnProps {}
+type Props = StateProps & DispatchProps & OwnProps;
+class TestComponent extends React.PureComponent<Props> {
+  constructor(props: any) {
+    super(props);
+  }
 
-const testComponent: React.SFC = () => <div>data</div>;
-export default testComponent;
+  render() {
+    return <div></div>;
+  }
+}
+
+export default TestComponent;
