@@ -13,8 +13,9 @@ body {
 
 .Header-container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     padding-top:15px;
+    padding-left:5em;
 }
 
 .Header-icon{
