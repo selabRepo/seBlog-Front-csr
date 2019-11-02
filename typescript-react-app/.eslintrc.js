@@ -34,6 +34,7 @@ module.exports = {
     'react-hooks'
   ],
   rules: {
+    "prefixWithI": "never",
     "prettier/prettier": [0,
       {
         "semi": true,
@@ -46,7 +47,6 @@ module.exports = {
         "jsxBracketSameLine": true,
       }
     ],
-
     "semi": 0,
     "eqeqeq": [1, "always"],
     "quotes": [1, "single"],
