@@ -51,6 +51,8 @@
     "react-docgen-typescript-loader": "^3.3.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-hot-loader": "^4.12.15",
+    "react-redux-typescript": "^3.0.0-rc.3",
+    "redux-logger": "^3.0.6",
     "redux-pender": "^2.0.12",
     "redux-thunk": "^2.3.0",
     "typescript": "^3.6.4"

@@ -1,9 +1,13 @@
 import * as React from "react";
-interface StateProps {}
-interface DispatchProps {}
-interface OwnProps {}
-type Props = StateProps & DispatchProps & OwnProps;
-class TestComponent extends React.PureComponent<Props> {
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { RootState } from "../../store/modules";
+import { blogListAction } from "../../store/modules/blogList";
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = ReturnType<typeof mapDispatchToProps>;
+type TestComponentProps = StateProps & DispatchProps;
+class TestComponent extends React.Component<TestComponentProps> {
   constructor(props: any) {
     super(props);
   }
@@ -11,6 +15,21 @@ class TestComponent extends React.PureComponent<Props> {
   render() {
     return <div></div>;
   }
+  componentDidMount() {
+    this.props.BlogListAction.getBlogList();
+  }
+  componentDidUpdate(prevProps: TestComponentProps, prevState: any) {
+    console.log(this.props.blogList);
+  }
 }
 
-export default TestComponent;
+const mapStateToProps = ({ blogList }: RootState) => ({
+  blogList
+});
+const mapDispatchToProps = dispatch => ({
+  BlogListAction: bindActionCreators(blogListAction, dispatch)
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TestComponent);
