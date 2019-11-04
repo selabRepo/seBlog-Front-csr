@@ -1,0 +1,34 @@
+.BlogListItem-container {
+  display: flex;
+}
+
+.BlogListItem-body {
+  padding: 30px;
+}
+
+.BlogListItem-title {
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.BlogListItem-info {
+  display: flex;
+  font-size: 22px;
+  color: #848484;
+  padding: 10px;
+}
+
+.BlogListItem-createdBy {
+  flex: 1;
+}
+
+.BlogListItem-createDate {
+  flex: 1;
+}
+
+.BlogListItem-content {
+  padding: 10px;
+  font-size: 20px;
+  color: #585858;
+  font-family: sans-serif;
+  letter-spacing: 0.3px;
+}
