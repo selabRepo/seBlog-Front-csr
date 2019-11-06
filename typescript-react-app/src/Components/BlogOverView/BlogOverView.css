@@ -1,9 +1,14 @@
 .BlogListItem-container {
   display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .BlogListItem-body {
   padding: 30px;
+  width: 100%;
+  height: 100%;
 }
 
 .BlogListItem-title {

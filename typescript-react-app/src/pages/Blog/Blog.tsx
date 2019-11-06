@@ -5,7 +5,8 @@ import titleImage from "./title.png";
 
 import "./Blog.css";
 
-const content = {
+const content = [
+  {
   createdDate: "2019-07-27",
   updatedDate: "2019-10-04",
   id: 1,
@@ -18,7 +19,21 @@ const content = {
   createdBy: "jyb",
   userID: 0,
   titleImg: titleImage
-};
+  },
+  {
+    createdDate: "2019-07-27",
+    updatedDate: "2019-10-04",
+    id: 2,
+    categoryID: 0,
+    title: "abb",
+    content: "abbbb",
+    hits: 1,
+    useYN: false,
+    createdBy: "jyb",
+    userID: 0,
+    titleImg: titleImage
+  }
+];
 
 const Blog = () => {
   return (
@@ -27,7 +42,7 @@ const Blog = () => {
         <h2> 작성된 포스트</h2>
       </div>
       <div className="blog-contents">
-        <BlogList {...content} />
+        <BlogList contents = {content} />
       </div>
     </div>
   );

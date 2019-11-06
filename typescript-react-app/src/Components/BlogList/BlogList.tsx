@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import BlogListItem from "../BlogListItem";
+import BlogOverView from "../BlogOverView";
 
 import "./BlogList.css";
 
-type contentType = {
+type ContentType = {
   createdDate: string;
   updatedDate: string;
   id: number;
@@ -17,32 +17,38 @@ type contentType = {
   titleImg: any;
 };
 
-const BlogList: FC<contentType> = ({
-  createdDate,
-  updatedDate,
-  id,
-  categoryID,
-  title,
-  content,
-  hits,
-  useYN,
-  createdBy,
-  userID,
-  titleImg
-}) => {
+type ContentItemType = {
+  contents: ContentType[];
+};
+
+const BlogList: FC<ContentItemType> = ({ contents }) => {
   return (
     <div className="BlogList">
       <div className="BlogList-contents">
-        <BlogListItem
-          createdDate={createdDate}
-          categoryID={categoryID}
-          title={title}
-          content={content}
-          hits={hits}
-          createdBy={createdBy}
-          id={id}
-          titleImg={titleImg}
-        />
+        {contents.map(
+          ({
+            createdDate,
+            categoryID,
+            title,
+            content,
+            hits,
+            createdBy,
+            id,
+            titleImg
+          }: ContentType) => (
+            <BlogOverView
+              createdDate={createdDate}
+              categoryID={categoryID}
+              title={title}
+              content={content}
+              hits={hits}
+              createdBy={createdBy}
+              id={id}
+              titleImg={titleImg}
+              key={id}
+            />
+          )
+        )}
       </div>
     </div>
   );

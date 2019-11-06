@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 
-import "./BlogListItem.css";
+import "./BlogOverView.css";
 
-type contentItemType = {
+type ContentItemType = {
   createdDate: string;
   id: number;
   categoryID: number;
@@ -13,7 +13,7 @@ type contentItemType = {
   titleImg: any;
 };
 
-const BlogListItem: FC<contentItemType> = ({
+const BlogOverView: FC<ContentItemType> = ({
   createdDate,
   id,
   categoryID,
@@ -45,4 +45,4 @@ const BlogListItem: FC<contentItemType> = ({
   );
 };
 
-export default BlogListItem;
+export default BlogOverView;
