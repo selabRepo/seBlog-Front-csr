@@ -1,20 +1,17 @@
 import * as React from "react";
 import Header from "./Header";
 import Menu from "./Menu";
-import Contents from "./Contents";
-
-const TestComponent = React.lazy(() => import("../Components/TestComponent"));
-
+import loadable from "@loadable/component";
+const TestComponent = loadable(() => import("../Components/TestComponent"));
+const Contents = loadable(() => import("./Contents"));
 const Layout: React.SFC<any> = () => {
   return (
-    <React.Suspense fallback={<div>loading...</div>}>
-      <div className="App">
-        <TestComponent />
-        <Header />
-        <Menu />
-        <Contents />
-      </div>
-    </React.Suspense>
+    <div className="App">
+      <TestComponent />
+      <Header />
+      <Menu />
+      <Contents />
+    </div>
   );
 };
 
