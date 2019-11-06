@@ -1,19 +1,33 @@
-import React from 'react'
-import './Contents.css'
-import { Route } from 'react-router-dom'
-import { Home, About, Blog, Setting } from '../../pages'
+import React from "react";
+import "./Contents.css";
+import { Setting } from "../../pages";
+import { Route, Switch } from "react-router-dom";
+import loadable from "@loadable/component";
 
-const Contents = () => {
-        return (
-                <div className="App-contetns">
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/About" component={About}/>
-                        <Route path="/Blog" component={Blog} />
-                        <Route path="/Setting" component={Setting} />
-                </div>
-        )
+const fallback = <div>Loading...</div>;
+const AboutComponent = loadable(() => import("../../pages/About"), {
+  fallback
+});
+const HomeComponent = loadable(
+  () => import(/* webpackChunkName: "HomeComponent" / / webpackPrefetch: true / / webpackPreload: true */ "../../pages/Home"),
+  {
+    fallback
+  }
+);
+const BlogComponent = loadable(() => import("../../pages/Blog"), {
+  fallback
+});
+const Contents: React.SFC<any> = () => {
+  return (
+    <div className="App-contetns">
+      <Switch>
+        <Route exact path="/" component={HomeComponent} />
+        <Route path="/About" component={AboutComponent} />
+        <Route path="/Blog" component={BlogComponent} />
+        <Route path="/Setting" component={Setting} />
+      </Switch>
+    </div>
+  );
+};
 
-}
-    
-
-export default Contents
+export default Contents;
