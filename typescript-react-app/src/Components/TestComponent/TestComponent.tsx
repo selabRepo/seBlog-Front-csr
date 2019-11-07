@@ -8,6 +8,7 @@ type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 type TestComponentProps = StateProps & DispatchProps;
 class TestComponent extends React.Component<TestComponentProps> {
+  // eslint-disable-next-line
   constructor(props: any) {
     super(props);
   }
