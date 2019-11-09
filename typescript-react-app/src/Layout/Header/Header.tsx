@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header.css'
+import './Header.scss'
 // import seLogo from '../../../public/img/logo/seLogo.jpg'
 
 const Header = () => 

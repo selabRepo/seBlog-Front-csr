@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import "./BlogOverView.css";
+import "./BlogOverView.scss";
 
 type ContentItemType = {
   createdDate: string;

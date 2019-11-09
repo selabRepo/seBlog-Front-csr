@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import BlogOverView from "../BlogOverView";
 
-import "./BlogList.css";
+import "./BlogList.scss";
 
 type ContentType = {
   createdDate: string;
