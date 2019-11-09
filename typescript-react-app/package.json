@@ -19,7 +19,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint src/**/**/*.ts && eslint src/**/**/*.tsx",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "markupStart": "nodemon markupServing.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -52,6 +53,8 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
     "prettier": "^1.18.2",
     "react-docgen-typescript-loader": "^3.3.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
