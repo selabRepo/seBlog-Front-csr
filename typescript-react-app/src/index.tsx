@@ -2,12 +2,12 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./index.css";
+import "./index.scss";
 const destination = document.querySelector(".root");
 
 ReactDOM.render(
-    <BrowserRouter>
+  <BrowserRouter>
     <App />
-    </BrowserRouter>,
-    destination
+  </BrowserRouter>,
+  destination
 );

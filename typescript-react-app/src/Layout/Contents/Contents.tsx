@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contents.css";
+import "./Contents.scss";
 import { Setting } from "../../pages";
 import { Route, Switch } from "react-router-dom";
 import loadable from "@loadable/component";
