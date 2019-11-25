@@ -1,6 +1,7 @@
 import React, { FC } from "react";
-
 import "./BlogOverView.scss";
+import eyes from "./icons/eye.svg";
+import date from "./icons/calendar.svg";
 
 type ContentItemType = {
   createdDate: string;
@@ -24,24 +25,33 @@ const BlogOverView: FC<ContentItemType> = ({
   titleImg
 }) => {
   return (
-    <div className="BlogListItem-root">
-      <div className="BlogListItem-container">
-        <div className="BlogListItem-titleImg">
-          <img src={titleImg} alt="titleImg" className="titleImg" />
+    <li className="list__item">
+      <div className="list__img">
+        <img alt="test" className="img img--thumbnail" src={titleImg} />
+      </div>
+      <div className="list__txt">
+        <div className="list__txt--top">
+          <div className="list__txt--top-header">
+            <div className="category">{categoryID}</div>
+            <div className="createdBy">{createdBy}</div>
+          </div>
+          <h2 className="title">{title}</h2>
         </div>
-        <div className="BlogListItem-body">
-          <div className="BlogListItem-title">
-            <h2>{title}</h2>
+        <div className="list__txt--bottom">
+          <p className="description">{content}</p>
+          <div className="status">
+            <div className="date">
+              <img src={date} alt="createDate" className="date-icon" />
+              {createdDate}
+            </div>
+            <div className="hits">
+              <img src={eyes} alt="hits" className="hits-icons" />
+              {hits}
+            </div>
           </div>
-          <div className="BlogListItem-info">
-            <div className="BlogListItem-createDate">{createdDate}</div>
-            <div className="BlogListItem-createdBy">{createdBy}</div>
-            <div className="BlogListItem-hits">{hits}</div>
-          </div>
-          <div className="BlogListItem-content">{content}</div>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 

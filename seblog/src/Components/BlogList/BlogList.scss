@@ -1,0 +1,18 @@
+.list__wrap--main {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .list__box {
+  column-width: 300px;
+  -moz-column-width: 300px;
+  -webkit-column-width: 300px;
+  -ms-column-width: 300px;
+  -o-column-width: 300px;
+  column-gap: 20px;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  -ms-column-gap: 20px;
+  -o-column-gap: 20px;
+  padding: 0 20px;
+  }
+}

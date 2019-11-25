@@ -3,14 +3,14 @@ import Header from "./Header";
 
 import loadable from "@loadable/component";
 const TestComponent = loadable(() => import("../Components/TestComponent"));
-const BlogList = loadable(() => import("./BlogList"));
+const Contents = loadable(() => import("./Contents"));
 
 const Layout: React.SFC<any> = () => {
   return (
     <div className="App">
       <TestComponent />
       <Header />
-      <BlogList />
+      <Contents />
     </div>
   );
 };
