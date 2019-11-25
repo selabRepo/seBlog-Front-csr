@@ -17,6 +17,11 @@ class Write extends Component<WriteComponentsProps, {}> {
     this.content = "";
   }
 
+  componentDidMount() {
+    console.log("123");
+  }
+  componentDidUpdate(prevProps: WriteComponentsProps, prveState: {}) {}
+
   handleInputChange = (dataKey: string) => (evt: React.ChangeEvent<HTMLInputElement>) => {
     evt.preventDefault();
     this[dataKey] = evt.target.value;
