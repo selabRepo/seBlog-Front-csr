@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 import "./BlogOverView.scss";
 import eyes from "./icons/eye.svg";
 
@@ -62,7 +63,9 @@ const BlogOverView: FC<ContentItemType> = ({
             </div>
             <div className="createdBy">{createdBy}</div>
           </div>
-          <h2 className="title">{title}</h2>
+          <Link to="/BlogDetail" className="title">
+            {title}
+          </Link>
         </div>
         <div className="list__txt--bottom">
           <p className="description">{content}</p>
