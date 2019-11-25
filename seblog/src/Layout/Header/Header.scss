@@ -1,33 +1,27 @@
-html,
-body {
-    height: 100%;
+.header__wrap {
+    background-color: #141517;
 }
 
-body {
-    margin: 0;
-}
-
-.App-Header {
-    height: 150px;
-    width: 100%;
-    background-color: black;
-}
-
-.Header-container {
+.header__box {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: center;
-    padding-top: 15px;
+    justify-content: space-between;
+    height: 80px;
+    line-height: 80px;
 }
 
-.Header-icon {
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    padding-top: 10px;
+.logo__wrap {
+    display: inline-flex;
 }
 
-.Header-title {
-    font-size: 60px;
+.logo--main_selog {
+    width: 50px;
+    height: auto;
+    padding: 15px 0;
     color: white;
-    padding-top: 25px;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Roboto Mono', monospace;
 }

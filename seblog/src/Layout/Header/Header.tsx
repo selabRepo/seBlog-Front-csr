@@ -1,17 +1,23 @@
-import React from 'react'
-import './Header.scss'
-// import seLogo from '../../../public/img/logo/seLogo.jpg'
-
-const Header = () => 
-        <div className="App-Header">
-            <div className="Header-container">
-            <img src={process.env.PUBLIC_URL + '/img/logo/seLogo.jpg'} alt="seLogo" className="Header-icon" />
-            {/* <img src = {seLogo} alt='seLogo' className="Header-icon" /> */}
-            <div className = "Header-title">
-                SELOG
-            </div>
-            </div>
+import React from "react";
+import "./Header.scss";
+const Header = () => {
+  return (
+    <div className="header__wrap">
+      <div className="header__box">
+        <div className="logo__wrap">
+          <div className="logo__box">
+            <a className="logo--main_selog" href="/">
+              selog
+            </a>
+          </div>
         </div>
-    
-
-export default Header
+        <div className="button__wrap--header">
+          <div className="button__box">
+            <button className="button button--menu"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Header;

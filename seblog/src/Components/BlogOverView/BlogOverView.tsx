@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-
 import "./BlogOverView.scss";
+import eyes from "./icons/eye.svg";
 
 type ContentItemType = {
   createdDate: string;
@@ -13,6 +13,30 @@ type ContentItemType = {
   titleImg: any;
 };
 
+type Category = {
+  id: number;
+  categoryName: string;
+};
+
+const category: Category[] = [
+  {
+    id: 0,
+    categoryName: "react"
+  },
+  {
+    id: 1,
+    categoryName: "javascript"
+  },
+  {
+    id: 2,
+    categoryName: "typescript"
+  },
+  {
+    id: 3,
+    categoryName: "java"
+  }
+];
+
 const BlogOverView: FC<ContentItemType> = ({
   createdDate,
   id,
@@ -24,24 +48,34 @@ const BlogOverView: FC<ContentItemType> = ({
   titleImg
 }) => {
   return (
-    <div className="BlogListItem-root">
-      <div className="BlogListItem-container">
-        <div className="BlogListItem-titleImg">
-          <img src={titleImg} alt="titleImg" className="titleImg" />
+    <li className="list__item">
+      <div className="list__img">
+        <img alt="test" className="img img--thumbnail" src={titleImg} />
+      </div>
+      <div className="list__txt">
+        <div className="list__txt--top">
+          <div className="list__txt--top-header">
+            <div className="category">
+              {category.map(index =>
+                index.id === categoryID ? index.categoryName : ""
+              )}
+            </div>
+            <div className="createdBy">{createdBy}</div>
+          </div>
+          <h2 className="title">{title}</h2>
         </div>
-        <div className="BlogListItem-body">
-          <div className="BlogListItem-title">
-            <h2>{title}</h2>
+        <div className="list__txt--bottom">
+          <p className="description">{content}</p>
+          <div className="status">
+            <div className="date">{createdDate}</div>
+            <div className="hits">
+              <img src={eyes} alt="hits" className="hits-icons" />
+              {hits}
+            </div>
           </div>
-          <div className="BlogListItem-info">
-            <div className="BlogListItem-createDate">{createdDate}</div>
-            <div className="BlogListItem-createdBy">{createdBy}</div>
-            <div className="BlogListItem-hits">{hits}</div>
-          </div>
-          <div className="BlogListItem-content">{content}</div>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
