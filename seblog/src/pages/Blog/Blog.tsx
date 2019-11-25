@@ -15,20 +15,20 @@ const content = [
     useYN: false,
     createdBy: "l2h",
     userID: 0,
-    titleImg: 'https://ko.reactjs.org/logo-og.png',
+    titleImg: "https://ko.reactjs.org/logo-og.png"
   },
   {
     createdDate: "2019-07-27",
     updatedDate: "2019-10-04",
     id: 2,
-    categoryID: 0,
+    categoryID: 1,
     title: "abb",
     content: "abbbb",
     hits: 1,
     useYN: false,
     createdBy: "LEE HOSU",
     userID: 0,
-    titleImg: 'https://ko.reactjs.org/logo-og.png',
+    titleImg: "https://ko.reactjs.org/logo-og.png"
   }
 ];
 

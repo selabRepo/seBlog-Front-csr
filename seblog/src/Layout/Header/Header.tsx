@@ -6,11 +6,9 @@ const Header = () => {
       <div className="header__box">
         <div className="logo__wrap">
           <div className="logo__box">
-            <img
-              className="logo logo--main_selog"
-              src={process.env.PUBLIC_URL + "/img/logo/seLogo.jpg"}
-              alt="logo"
-            />
+            <a className="logo--main_selog" href="/">
+              selog
+            </a>
           </div>
         </div>
         <div className="button__wrap--header">

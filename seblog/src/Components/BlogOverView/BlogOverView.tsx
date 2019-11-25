@@ -14,6 +14,30 @@ type ContentItemType = {
   titleImg: any;
 };
 
+type Category = {
+  id: number;
+  categoryName: string;
+};
+
+const category: Category[] = [
+  {
+    id: 0,
+    categoryName: "react"
+  },
+  {
+    id: 1,
+    categoryName: "javascript"
+  },
+  {
+    id: 2,
+    categoryName: "typescript"
+  },
+  {
+    id: 3,
+    categoryName: "java"
+  }
+];
+
 const BlogOverView: FC<ContentItemType> = ({
   createdDate,
   id,
@@ -32,7 +56,11 @@ const BlogOverView: FC<ContentItemType> = ({
       <div className="list__txt">
         <div className="list__txt--top">
           <div className="list__txt--top-header">
-            <div className="category">{categoryID}</div>
+            <div className="category">
+              {category.map(index =>
+                index.id === categoryID ? index.categoryName : ""
+              )}
+            </div>
             <div className="createdBy">{createdBy}</div>
           </div>
           <h2 className="title">{title}</h2>

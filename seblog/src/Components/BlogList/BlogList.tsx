@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./BlogList.scss";
-import BlogOverView from '../BlogOverView';
+import BlogOverView from "../BlogOverView";
 
 type ContentType = {
   createdDate: string;
@@ -22,9 +22,9 @@ type ContentItemType = {
 
 const BlogList: FC<ContentItemType> = ({ contents }) => {
   return (
-     <div className="list__wrap list__wrap--main">
+    <div className="list__wrap list__wrap--main">
       <ul className="list__box">
-       {contents.map(
+        {contents.map(
           ({
             createdDate,
             categoryID,
@@ -48,8 +48,8 @@ const BlogList: FC<ContentItemType> = ({ contents }) => {
             />
           )
         )}
-        </ul>
-      </div>
+      </ul>
+    </div>
   );
 };
 
