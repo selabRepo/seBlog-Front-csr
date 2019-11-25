@@ -12,6 +12,8 @@
   -moz-transition: box-shadow 0.25s ease;
   -o-transition: box-shadow 0.25s ease;
   box-sizing: border-box;
+  height: 100%;
+  margin: 10px;
 
   &:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
@@ -70,12 +72,14 @@
     .title {
       font-size: 25px;
       color: #fff;
+      line-height: 150%;
     }
   }
 
   .list__txt--bottom {
     .description {
       margin: 0 0 20px 0;
+      line-height: 150%;
     }
 
     .status {
@@ -86,12 +90,6 @@
 
       .date {
         display: inline-flex;
-
-        .date-icon {
-          width: 30px;
-          height: 20px;
-          padding-right: 0.5em;
-        }
       }
 
       .hits {

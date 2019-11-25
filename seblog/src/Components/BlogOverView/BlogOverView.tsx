@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import "./BlogOverView.scss";
 import eyes from "./icons/eye.svg";
-import date from "./icons/calendar.svg";
 
 type ContentItemType = {
   createdDate: string;
@@ -68,10 +67,7 @@ const BlogOverView: FC<ContentItemType> = ({
         <div className="list__txt--bottom">
           <p className="description">{content}</p>
           <div className="status">
-            <div className="date">
-              <img src={date} alt="createDate" className="date-icon" />
-              {createdDate}
-            </div>
+            <div className="date">{createdDate}</div>
             <div className="hits">
               <img src={eyes} alt="hits" className="hits-icons" />
               {hits}
