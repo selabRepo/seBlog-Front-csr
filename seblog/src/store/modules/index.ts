@@ -1,12 +1,15 @@
 import { combineReducers } from "redux";
 import blogList, { BlogListState } from "./blogList";
 import blog, { Blog } from "./blog";
-export default combineReducers({
+import category, { CategoryState } from "./category";
+export default combineReducers<RootState>({
   blogList,
-  blog
+  blog,
+  category
 });
 
 export type RootState = {
   blogList: BlogListState;
   blog: Blog;
+  category: CategoryState;
 };
