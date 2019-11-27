@@ -1,10 +1,10 @@
 import * as React from "react";
-import BlogDetailView from "../../Components/BlogDetailView";
+import Detail from "../../Components/Blog/Detail";
 
 const BlogDetail = () => {
   return (
     <div className="blogDetail">
-      <BlogDetailView />
+      <Detail />
     </div>
   );
 };

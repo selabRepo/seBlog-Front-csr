@@ -1,7 +1,7 @@
 import * as React from "react";
-import "./BlogDetailView.scss";
+import "./Detail.scss";
 
-const BlogDetailView = () => {
+const Detail = () => {
   return (
     <div>
       <h1> BlogDetailView test</h1>
@@ -9,4 +9,4 @@ const BlogDetailView = () => {
   );
 };
 
-export default BlogDetailView;
+export default Detail;
