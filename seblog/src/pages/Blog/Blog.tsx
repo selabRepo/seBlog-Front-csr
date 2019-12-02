@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import BlogList from "../../Components/BlogList";
 import "./Blog.scss";
 
@@ -21,7 +21,7 @@ const content = [
     createdDate: "2019-07-27",
     updatedDate: "2019-10-04",
     id: 2,
-    categoryID: 1,
+    categoryID: 2,
     title: "abb",
     content: "abbbb",
     hits: 1,
@@ -33,7 +33,7 @@ const content = [
   {
     createdDate: "2019-07-27",
     updatedDate: "2019-10-04",
-    id: 2,
+    id: 3,
     categoryID: 1,
     title: "아주 오래된 기억",
     content: "백예린 짱짱걸 진짜 노래 너무 좋다. 꼭 들어보세여~~~",
@@ -46,7 +46,7 @@ const content = [
   {
     createdDate: "2019-11-31",
     updatedDate: "2019-10-04",
-    id: 1,
+    id: 4,
     categoryID: 3,
     title: "SELOG 만든 사람들",
     content: "너는 못만들거임ㅋ",
@@ -59,7 +59,7 @@ const content = [
   {
     createdDate: "2019-11-31",
     updatedDate: "2019-10-04",
-    id: 1,
+    id: 5,
     categoryID: 3,
     title: "SELOG 만든 사람들",
     content: "너는 못만들거임ㅋ",
@@ -72,7 +72,7 @@ const content = [
   {
     createdDate: "2019-11-31",
     updatedDate: "2019-10-04",
-    id: 1,
+    id: 6,
     categoryID: 3,
     title: "SELOG 만든 사람들",
     content: "너는 못만들거임ㅋ",
@@ -85,7 +85,7 @@ const content = [
   {
     createdDate: "2019-07-27",
     updatedDate: "2019-10-04",
-    id: 1,
+    id: 7,
     categoryID: 0,
     title: "내게 실용적이었던 프로그래밍 공부 방법들",
     content:

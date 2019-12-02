@@ -3,7 +3,6 @@ import Blog from "../../pages/Blog";
 import "./Contents.scss";
 
 const Contents = () => {
-  // <BlogList />;
   return (
     <div className="App-contents">
       <Blog />

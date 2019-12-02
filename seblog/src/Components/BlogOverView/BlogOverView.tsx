@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 import "./BlogOverView.scss";
 import eyes from "./icons/eye.svg";
 
@@ -10,7 +11,7 @@ type ContentItemType = {
   content: string;
   hits: number;
   createdBy: string;
-  titleImg: any;
+  titleImg: string;
 };
 
 type Category = {
@@ -50,7 +51,7 @@ const BlogOverView: FC<ContentItemType> = ({
   return (
     <li className="list__item">
       <div className="list__img">
-        <img alt="test" className="img img--thumbnail" src={titleImg} />
+        <img alt="titleImg" className="img img--thumbnail" src={titleImg} />
       </div>
       <div className="list__txt">
         <div className="list__txt--top">
@@ -62,7 +63,16 @@ const BlogOverView: FC<ContentItemType> = ({
             </div>
             <div className="createdBy">{createdBy}</div>
           </div>
-          <h2 className="title">{title}</h2>
+          <Link
+            to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}`}
+            className="title"
+          >
+            {/* <Link
+              to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}/${titleImg}`}
+              className="title"
+           </Link> > */}
+            {title}
+          </Link>
         </div>
         <div className="list__txt--bottom">
           <p className="description">{content}</p>
