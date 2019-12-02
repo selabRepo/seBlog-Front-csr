@@ -11,7 +11,7 @@ type ContentItemType = {
   content: string;
   hits: number;
   createdBy: string;
-  titleImg: any;
+  titleImg: string;
 };
 
 type Category = {
@@ -51,7 +51,7 @@ const BlogOverView: FC<ContentItemType> = ({
   return (
     <li className="list__item">
       <div className="list__img">
-        <img alt="test" className="img img--thumbnail" src={titleImg} />
+        <img alt="titleImg" className="img img--thumbnail" src={titleImg} />
       </div>
       <div className="list__txt">
         <div className="list__txt--top">
@@ -63,7 +63,14 @@ const BlogOverView: FC<ContentItemType> = ({
             </div>
             <div className="createdBy">{createdBy}</div>
           </div>
-          <Link to="/BlogDetail" className="title">
+          <Link
+            to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}`}
+            className="title"
+          >
+            {/* <Link
+              to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}/${titleImg}`}
+              className="title"
+           </Link> > */}
             {title}
           </Link>
         </div>

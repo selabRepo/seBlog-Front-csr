@@ -13,7 +13,11 @@ const Layout: React.SFC<any> = () => {
       <TestComponent />
       <Header />
       <Route exact path="/" component={Contents} />
-      <Route exact path="/blog/detail" component={BlogDetail} />
+      <Route
+        exact
+        path="/blog/detail/:createdBy/:title/:content/:createdDate"
+        component={BlogDetail}
+      />
     </div>
   );
 };

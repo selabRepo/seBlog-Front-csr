@@ -1,10 +1,39 @@
-import * as React from "react";
+import React, { FC } from "react";
 import "./Detail.scss";
 
-const Detail = () => {
+type ContentItemType = {
+  title: string;
+  content: string;
+  createdBy: string;
+  createdDate: string;
+};
+
+const Detail: FC<ContentItemType> = ({
+  createdBy,
+  title,
+  content,
+  createdDate
+}) => {
   return (
-    <div>
-      <h1> BlogDetailView test</h1>
+    <div className="Detail-App">
+      <div className="Detail-top">
+        <div className="top-createdBy">{createdBy}</div>
+        <div className="top-image">
+          <img
+            src="https://ko.reactjs.org/logo-og.png"
+            alt="titleImg"
+            className="titleImg"
+          />
+        </div>
+      </div>
+      <div className="Detail-title">
+        <h2>{title}</h2>
+      </div>
+      <div className="separator"></div>
+      <div className="Detail-content">{content}</div>
+      <div className="Detail-info">
+        <div className="top-date">{createdDate}</div>
+      </div>
     </div>
   );
 };

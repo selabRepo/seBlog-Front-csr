@@ -13,7 +13,7 @@ type ContentType = {
   useYN: boolean;
   createdBy: string;
   userID: number;
-  titleImg: any;
+  titleImg: string;
 };
 
 type ContentItemType = {
