@@ -7,6 +7,7 @@ const TestComponent = loadable(() => import("../Components/TestComponent"));
 const BlogWrite = loadable(() => import("../pages/BlogWrite"));
 const Contents = loadable(() => import("./Contents"));
 const BlogDetail = loadable(() => import("../pages/BlogDetail"));
+const NotFound = loadable(() => import("../pages/NotFound"));
 
 const Layout: React.SFC<any> = () => {
   return (
@@ -18,6 +19,7 @@ const Layout: React.SFC<any> = () => {
         path="/blog/detail/:createdBy/:title/:content/:createdDate"
         component={BlogDetail}
       />
+      <Route component={NotFound} />
     </div>
   );
 };
