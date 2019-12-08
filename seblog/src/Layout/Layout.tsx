@@ -27,10 +27,7 @@ const Layout: React.SFC<RouteComponentProps<ContentItemType>> = props => {
       <Header />
       <Switch>
         <Route exact path="/" component={Contents} />
-        <Route
-          path="/blog/detail/:createdBy/:title/:content/:createdDate"
-          component={BlogDetail}
-        />
+        <Route path="/blog/detail/:id" component={BlogDetail} />
         <Route component={NotFound} />
       </Switch>
     </div>

@@ -49,7 +49,7 @@ const BlogOverView: FC<ContentItemType> = ({
   titleImg
 }) => {
   return (
-    <Link to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}`}>
+    <Link to={`/blog/detail/${id}`}>
       <li className="list__item">
         <div className="list__img">
           <img alt="titleImg" className="img img--thumbnail" src={titleImg} />
