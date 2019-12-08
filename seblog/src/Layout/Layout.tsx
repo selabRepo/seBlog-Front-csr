@@ -1,6 +1,11 @@
 import * as React from "react";
 import Header from "./Header";
-import { Route } from "react-router-dom";
+import {
+  Route,
+  Switch,
+  RouteComponentProps,
+  withRouter
+} from "react-router-dom";
 
 import loadable from "@loadable/component";
 const TestComponent = loadable(() => import("../Components/TestComponent"));
@@ -9,19 +14,27 @@ const Contents = loadable(() => import("./Contents"));
 const BlogDetail = loadable(() => import("../pages/BlogDetail"));
 const NotFound = loadable(() => import("../pages/NotFound"));
 
-const Layout: React.SFC<any> = () => {
+type ContentItemType = {
+  title: string;
+  content: string;
+  createdBy: string;
+  createdDate: string;
+};
+
+const Layout: React.SFC<RouteComponentProps<ContentItemType>> = props => {
   return (
     <div className="App">
       <Header />
-      <Route exact path="/" component={Contents} />
-      <Route
-        exact
-        path="/blog/detail/:createdBy/:title/:content/:createdDate"
-        component={BlogDetail}
-      />
-      <Route component={NotFound} />
+      <Switch>
+        <Route exact path="/" component={Contents} />
+        <Route
+          path="/blog/detail/:createdBy/:title/:content/:createdDate"
+          component={BlogDetail}
+        />
+        <Route component={NotFound} />
+      </Switch>
     </div>
   );
 };
 
-export default Layout;
+export default withRouter(Layout);
