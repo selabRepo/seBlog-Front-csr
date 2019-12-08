@@ -9,7 +9,6 @@ const Header = () => {
       <header className="header__box">
         <div className="logo__wrap">
           <div className="logo__box">
-              <img className="logo logo--main_selog" src="/public/img/SELAB_logo.png" alt="logo" />
             <Link className="logo--main_selog" to="/">
               selog
             </Link>
