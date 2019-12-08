@@ -5,15 +5,10 @@ type ContentItemType = {
   title: string;
   content: string;
   createdBy: string;
-  createdDate: string;
+  date: string;
 };
 
-const Detail: FC<ContentItemType> = ({
-  createdBy,
-  title,
-  content,
-  createdDate
-}) => {
+const Detail: FC<ContentItemType> = ({ createdBy, title, content, date }) => {
   return (
     <div className="Detail-App">
       <div className="Detail-top">
@@ -32,7 +27,7 @@ const Detail: FC<ContentItemType> = ({
       <div className="separator"></div>
       <div className="Detail-content">{content}</div>
       <div className="Detail-info">
-        <div className="top-date">{createdDate}</div>
+        <div className="top-date">{date}</div>
       </div>
     </div>
   );

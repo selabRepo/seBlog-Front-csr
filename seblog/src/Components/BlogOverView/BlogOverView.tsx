@@ -49,43 +49,36 @@ const BlogOverView: FC<ContentItemType> = ({
   titleImg
 }) => {
   return (
-    <li className="list__item">
-      <div className="list__img">
-        <img alt="titleImg" className="img img--thumbnail" src={titleImg} />
-      </div>
-      <div className="list__txt">
-        <div className="list__txt--top">
-          <div className="list__txt--top-header">
-            <div className="category">
-              {category.map(index =>
-                index.id === categoryID ? index.categoryName : ""
-              )}
-            </div>
-            <div className="createdBy">{createdBy}</div>
-          </div>
-          <Link
-            to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}`}
-            className="title"
-          >
-            {/* <Link
-              to={`/blog/detail/${createdBy}/${title}/${content}/${createdDate}/${titleImg}`}
-              className="title"
-           </Link> > */}
-            {title}
-          </Link>
+    <Link to={`/blog/detail/${id}`}>
+      <li className="list__item">
+        <div className="list__img">
+          <img alt="titleImg" className="img img--thumbnail" src={titleImg} />
         </div>
-        <div className="list__txt--bottom">
-          <p className="description">{content}</p>
-          <div className="status">
-            <div className="date">{createdDate}</div>
-            <div className="hits">
-              <img src={eyes} alt="hits" className="hits-icons" />
-              {hits}
+        <div className="list__txt">
+          <div className="list__txt--top">
+            <div className="list__txt--top-header">
+              <div className="category">
+                {category.map(index =>
+                  index.id === categoryID ? index.categoryName : ""
+                )}
+              </div>
+              <div className="createdBy">{createdBy}</div>
+            </div>
+            <div className="title">{title}</div>
+          </div>
+          <div className="list__txt--bottom">
+            <p className="description">{content}</p>
+            <div className="status">
+              <div className="date">{createdDate}</div>
+              <div className="hits">
+                <img src={eyes} alt="hits" className="hits-icons" />
+                {hits}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </Link>
   );
 };
 
