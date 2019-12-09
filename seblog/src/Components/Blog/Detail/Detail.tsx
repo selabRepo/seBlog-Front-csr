@@ -6,6 +6,7 @@ type ContentItemType = {
   content: string;
   createdBy: string;
   date: string;
+  thumbnail: string;
 };
 
 const Detail: FC<ContentItemType> = ({ createdBy, title, content, date }) => {
@@ -14,11 +15,7 @@ const Detail: FC<ContentItemType> = ({ createdBy, title, content, date }) => {
       <div className="Detail-top">
         <div className="top-createdBy">{createdBy}</div>
         <div className="top-image">
-          <img
-            src="https://ko.reactjs.org/logo-og.png"
-            alt="titleImg"
-            className="titleImg"
-          />
+          <img src="{thumbnail}" alt="thumbnail" className="titleImg" />
         </div>
       </div>
       <div className="Detail-title">

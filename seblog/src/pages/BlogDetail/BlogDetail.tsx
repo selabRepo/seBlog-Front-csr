@@ -5,7 +5,6 @@ import { RootState } from "../../store/modules";
 import { bindActionCreators } from "redux";
 import { blogAction } from "../../store/modules/blog";
 import { connect } from "react-redux";
-import Blog from "../Blog/Blog";
 
 interface ContentItemType {
   id: string;
@@ -32,8 +31,8 @@ class BlogDetail extends Component<BlogDetailComponentsProps, {}> {
     }
   }
   render() {
-    const { title, createdBy, content, date } = this.props.blog;
-    return <Detail {...{ title, createdBy, content, date }} />;
+    const { title, createdBy, content, date, thumbnail } = this.props.blog;
+    return <Detail {...{ title, createdBy, content, date, thumbnail }} />;
   }
 }
 
