@@ -1,13 +1,13 @@
 .title__wrap--main {
     position: relative;
     width: 100%;
-    height: 660px;
+    height: 600px;
 
-    .title__box{
+    .title__box {
         position: absolute;
         display: inline-block;
         text-align: center;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         transform: -webkit-translate(-50%, -50%);
@@ -15,14 +15,18 @@
         transform: -ms-translate(-50%, -50%);
         transform: -o-translate(-50%, -50%);
 
-        .title--top{
-            font-size: 80px; 
-            font-weight: 700;
+        .title--top {
+            font: {
+                size: 80px;
+                weight: 700;
+            }
+
             color: #fff;
             margin: 0 0 20px 0;
         }
 
         .title--bottom {
+            width: 300px;
             font-size: 25px;
             color: #fff;
             line-height: 1.5;
