@@ -11,7 +11,7 @@ const MainTitle = ({ mainTitle, subTitle }) => {
     <section className="title__wrap--main">
       <div className="title__box">
         <h1 className="title title--top">{mainTitle}</h1>
-        <p className="title title--bottom">{subTitle}</p>
+        <div className="title title--bottom">{subTitle}</div>
       </div>
     </section>
   );
