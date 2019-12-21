@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import loadable from "@loadable/component";
+import SideMenu from "./SideMenu";
 const TestComponent = loadable(() => import("../Components/TestComponent"));
 const BlogWrite = loadable(() => import("../pages/BlogWrite"));
 const Contents = loadable(() => import("./Contents"));
@@ -25,6 +26,7 @@ const Layout: React.SFC<RouteComponentProps<ContentItemType>> = props => {
   return (
     <div className="App">
       <Header />
+      <SideMenu />
       <Switch>
         <Route exact path="/" component={Contents} />
         <Route path="/blog/detail/:id" component={BlogDetail} />
