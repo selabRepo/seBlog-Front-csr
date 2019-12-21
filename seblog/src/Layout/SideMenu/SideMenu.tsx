@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./SideMenu.scss";
+import NavigationMenu from "src/pages/NavigationMenu";
 
 class SideMenu extends Component {
   render() {
     return (
       <>
-        <nav className="navigation__wrap"></nav>
+        <NavigationMenu />
       </>
     );
   }
